@@ -7,60 +7,42 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+## Acerca del Proyecto
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Este proyecto es un **Portafolio Administrativo** desarrollado con el framework Laravel y Vue.js. Está diseñado para que el usuario pueda gestionar de manera intuitiva su información personal, proyectos, publicaciones y cualquier otro contenido relevante en su portafolio. Con este sistema, los usuarios tienen la capacidad de:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- **Editar** sus datos personales.
+- **Actualizar** o agregar nuevas secciones a su portafolio.
+- **Gestionar proyectos y publicaciones** para reflejar sus trabajos y experiencias recientes.
+- Personalizar la apariencia y el contenido del portafolio de acuerdo a sus necesidades.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Este portafolio ofrece una interfaz moderna, interactiva y completamente adaptable, ideal para aquellos que desean destacar su perfil profesional y tener el control total de su contenido.
 
-## Learning Laravel
+## Tecnologías Utilizadas
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Este proyecto utiliza un stack moderno y eficiente que incluye las siguientes tecnologías:
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+- **[Laravel](https://laravel.com)**: Framework PHP para el desarrollo de aplicaciones web robustas y escalables.
+- **[Vue.js](https://vuejs.org)**: Framework JavaScript para construir interfaces de usuario reactivas.
+- **[Inertia.js](https://inertiajs.com)**: Herramienta que permite integrar Vue.js con Laravel sin necesidad de APIs, simplificando la creación de Single Page Applications (SPA).
+- **[Tailwind CSS](https://tailwindcss.com)**: Framework CSS para crear interfaces personalizadas de manera rápida usando clases de utilidad.
+- **[Jetstream](https://jetstream.laravel.com)**: Provee autenticación, administración de equipos y administración de sesiones.
+- **[Vite](https://vitejs.dev)**: Empaquetador de módulos ultrarrápido y liviano.
+- **[Axios](https://axios-http.com)** (opcional): Para manejar peticiones HTTP desde el frontend si se requiere conectarse con APIs externas.
+- **[Bootstrap Icons](https://icons.getbootstrap.com/)**: Biblioteca de íconos que mejora la presentación visual.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Funcionalidades Clave
 
-## Laravel Sponsors
+- **Gestión de Usuarios**: Autenticación segura y administración de sesión con Laravel Sanctum.
+- **Perfil Dinámico**: Los usuarios pueden actualizar sus datos y cambiar su foto de perfil.
+- **Administración de Proyectos**: Sección de proyectos donde el usuario puede agregar, editar y eliminar información sobre sus trabajos.
+- **Diseño Adaptable**: Interfaz completamente adaptable, optimizada para dispositivos móviles y de escritorio.
+- **Animaciones Interactivas**: Con animaciones y efectos creados con Tailwind CSS para mejorar la experiencia del usuario.
+- **Soporte de Imagen Dinámica**: Los iconos y las imágenes se pueden actualizar dinámicamente a través de configuraciones o APIs externas.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## Instalación y Configuración
 
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+1. **Clona el repositorio:**
+   ```bash
+   git clone https://github.com/MarvinH10/PortafolioInteractivo.git
+   cd PortafolioInteractivo
