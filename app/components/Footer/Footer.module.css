@@ -1,1 +1,12 @@
 /* ACA IRAN LOS ESTILOS DEL FOOTER */
+
+.footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
