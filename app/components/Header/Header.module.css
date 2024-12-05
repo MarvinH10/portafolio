@@ -1,7 +1,16 @@
-/* ACA IRAN LOS ESTILOS DEL HEADER */
-
 .header {
-  background-color: transparent;
+  position: fixed;
+  background-color: transparent ;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.scrolled {
+  background-color: #090d15;
+  height: 60px;
 }
 
 .nav {
@@ -12,13 +21,15 @@
 
 .ul {
   list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex; /* Mostrar los elementos de la lista en fila */
-  gap: 2rem; /* Espaciado entre enlaces */
+  display: flex;
+  gap: 2rem;
 }
 
 .ul li a {
   text-decoration: none;
-  color: black;
+  color: white !important;
+}
+
+.links {
+  margin: 2rem;
 }

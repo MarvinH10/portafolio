@@ -4,7 +4,7 @@ import styles from "./Footer.module.css";
 const Footer: React.FC = () => {
     return (
         <footer className={styles.footer}>
-            <p>&copy; 2024 Derechos reservados.</p>
+            <p className={styles.parrafo}>&copy; 2024 Derechos reservados.</p>
         </footer>
     );
 };

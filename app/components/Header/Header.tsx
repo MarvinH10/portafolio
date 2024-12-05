@@ -1,26 +1,54 @@
-"use client"; //ESTO SIRVE PARA CONVERTIR A UN COMPONENTE EN CLIENTE MAS QUE TODO CUANDO HAYA EVENTOS COMO EL ONCLICK U ONCHANGE
+"use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./Header.module.css";
 
 const Header: React.FC = () => {
+    const [isScrolled, setIsScrolled] = useState(false);
 
-    // EJEMPLO DE COMO PODEMOS SCROLEAR VOLVER AL CAMPO DE INICIO:
-    const volverAInicio = (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 0) {
+                setIsScrolled(true);
+            } else {
+                setIsScrolled(false);
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll);
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
+
+    const irASeccion = (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
         event.preventDefault();
-        const targetElement = document.getElementById("inicio");
-        if (targetElement) {
-            targetElement.scrollIntoView({ behavior: "smooth" });
+        const href = event.currentTarget.getAttribute("href");
+        if (href && href.startsWith("#")) {
+            const targetElement = document.getElementById(href.substring(1));
+            if (targetElement) {
+                targetElement.scrollIntoView({ behavior: "smooth" });
+            }
         }
     };
 
     return (
-        <header className={styles.header}>
+        <header className={`${styles.header} ${isScrolled ? styles.scrolled : ""}`}>
             <nav className={styles.nav}>
                 <ul className={styles.ul}>
                     <li>
-                        <a href="#inicio" onClick={volverAInicio}>
+                        <a className={styles.links} href="#inicio" onClick={irASeccion}>
                             Inicio
+                        </a>
+                        <a className={styles.links} href="#acerca" onClick={irASeccion}>
+                            Acerca de mí
+                        </a>
+                        <a className={styles.links} href="#portafolio" onClick={irASeccion}>
+                            Portafolio
+                        </a>
+                        <a className={styles.links} href="#contacto" onClick={irASeccion}>
+                            Contacto
                         </a>
                     </li>
                 </ul>
