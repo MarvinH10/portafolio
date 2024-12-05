@@ -1,1 +1,24 @@
 /* ACA IRAN LOS ESTILOS DEL HEADER */
+
+.header {
+  background-color: transparent;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex; /* Mostrar los elementos de la lista en fila */
+  gap: 2rem; /* Espaciado entre enlaces */
+}
+
+.ul li a {
+  text-decoration: none;
+  color: black;
+}

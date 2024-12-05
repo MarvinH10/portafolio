@@ -17,7 +17,7 @@ const Header: React.FC = () => {
     return (
         <header className={styles.header}>
             <nav className={styles.nav}>
-                <ul className={styles.navList}>
+                <ul className={styles.ul}>
                     <li>
                         <a href="#inicio" onClick={volverAInicio}>
                             Inicio
