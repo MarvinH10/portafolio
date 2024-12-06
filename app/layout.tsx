@@ -1,6 +1,5 @@
 import "./globals.css";
 import Header from "./components/Header/Header";
-import Hero from "./components/Hero/Hero";
 import Footer from "./components/Footer/Footer";
 
 export default function RootLayout({
@@ -12,9 +11,6 @@ export default function RootLayout({
     <html lang="es">
       <body>
         <Header />
-        <Hero />
-        <main>{children}</main>
-        <main>{children}</main>
         <main>{children}</main>
         <Footer />
       </body>

@@ -77,7 +77,7 @@ const Hero: React.FC = () => {
                     />
                 </div>
                 <h1 className={styles.h1}>
-                    Hola, soy <span className={styles.span}>Marvin Campos</span>
+                    Hola, soy <span className={styles.span}>Tal Persona</span>
                 </h1>
                 <p className={styles.parrafo}>
                     Soy un apasionado desarrollador Full Stack, combinando habilidades de frontend y backend

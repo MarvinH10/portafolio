@@ -97,64 +97,9 @@
     background-color: rgba(255, 255, 255, 0.4);
 }
 
-@media (max-width: 768px) {
-    .content {
-        padding-left: 50px;
-        padding-right: 50px;
-    }
-
-    .h1 {
-        font-size: 2rem;
-    }
-
-    .parrafo {
-        font-size: 0.9rem;
-    }
-
-    .circleImage {
-        width: 90px;
-        height: 90px;
-    }
-
-    .socialLinks a {
-        width: 35px;
-        height: 35px;
-        font-size: 1.2rem;
-        outline: none;
-    }
-
-    .socialLinks a:focus {
-        outline: none;
-    }
-}
-
-@media (max-width: 480px) {
+@media (max-width: 780px) {
     .content {
         padding-left: 20px;
         padding-right: 20px;
-    }
-
-    .h1 {
-        font-size: 1.5rem;
-    }
-
-    .parrafo {
-        font-size: 0.8rem;
-    }
-
-    .circleImage {
-        width: 70px;
-        height: 70px;
-    }
-
-    .socialLinks a {
-        width: 30px;
-        height: 30px;
-        font-size: 1rem;
-        outline: none;
-    }
-
-    .socialLinks a:focus {
-        outline: none;
     }
 }
