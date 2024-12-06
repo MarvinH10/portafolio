@@ -8,12 +8,10 @@ const Header: React.FC = () => {
 
     useEffect(() => {
         const handleScroll = () => {
-            if (window.scrollY > 0) {
-                setIsScrolled(true);
-            } else {
-                setIsScrolled(false);
-            }
+            setIsScrolled(window.scrollY > 0);
         };
+
+        handleScroll();
 
         window.addEventListener("scroll", handleScroll);
 
