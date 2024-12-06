@@ -16,7 +16,7 @@ const About: React.FC = () => {
                     </div>
                     <div className={styles.textoWrapper}>
                         <h3 className={styles.encabezado}>¡Hola! Me llamo Persona X</h3>
-                        <p className={styles.subtitulo}>Desarrollador Full Stack</p>
+                        <p className={styles.subtitulo}>Desarrollador Full Stack OMG</p>
                         <p className={styles.descripcion}>
                             Soy un desarrollador apasionado con experiencia en la creación de aplicaciones web dinámicas y funcionales.
                             Mi objetivo es combinar habilidades de frontend y backend para ofrecer soluciones innovadoras e impactantes.
