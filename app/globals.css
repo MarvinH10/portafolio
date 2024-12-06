@@ -1,3 +1,5 @@
+@import "@fortawesome/fontawesome-free/css/all.min.css";
+
 :root {
   --background: white;
   --foreground: black;
@@ -21,5 +23,4 @@ body {
 .home {
   position: relative;
   padding: 2rem;
-  margin-top: 70vh;
 }
