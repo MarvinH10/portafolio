@@ -1,0 +1,35 @@
+.header {
+  position: fixed;
+  background-color: transparent ;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.scrolled {
+  background-color: rgb(0, 0, 0);
+  height: 60px;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.ul li a {
+  text-decoration: none;
+  color: white !important;
+}
+
+.links {
+  margin: 2rem;
+}
