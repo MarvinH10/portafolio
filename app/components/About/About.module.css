@@ -1,7 +1,7 @@
 .about {
     background-color: rgb(5, 5, 5);
     color: white;
-    padding: 50px 20px;
+    padding: 5px 20px;
 }
 
 .container {
@@ -10,14 +10,30 @@
     align-items: center;
     justify-content: center;
     gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
 }
+
 
 .titulo {
     font-size: 2rem;
     text-align: center;
-    color: rgb(21, 255, 0);
+    color: rgb(14, 172, 0);
     margin-bottom: 40px;
     position: relative;
+}
+
+.titulo::before {
+    content: "";
+    display: block;
+    width: 150px;
+    height: 1px;
+    background: rgb(160, 160, 160);
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
 }
 
 .titulo::after {
@@ -25,9 +41,14 @@
     display: block;
     width: 80px;
     height: 2px;
-    background: rgb(21, 255, 0);
-    margin: 10px auto 0;
+    background: rgb(14, 172, 0);
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
 }
+
 
 .contenido {
     display: flex;
@@ -36,7 +57,7 @@
 }
 
 .imagenWrapper {
-    flex: 1;
+    flex: 1.5;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -65,7 +86,7 @@
 
 .subtitulo {
     font-size: 1.2rem;
-    color: rgb(21, 255, 0);
+    color: rgb(14, 172, 0);
     margin-bottom: 20px;
 }
 
@@ -104,21 +125,21 @@
 }
 
 .botonDescargar {
-    background-color: rgb(21, 255, 0);
-    color: black;
-    border: none;
+    background-color: rgb(14, 172, 0);
+    color: white;
+    border: 2px solid rgb(14, 172, 0);
     padding: 10px 20px;
     font-size: 1rem;
+    font-weight: 700;
     border-radius: 5px;
     cursor: pointer;
     align-self: flex-start;
-    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .botonDescargar:hover {
     background-color: white;
-    color: black;
-    transform: scale(1.05);
+    color: rgb(14, 172, 0);
+    border: 2px solid;
 }
 
 @media (max-width: 768px) {
