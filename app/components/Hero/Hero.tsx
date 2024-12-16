@@ -4,6 +4,11 @@ import React, { useEffect } from "react";
 import styles from "./Hero.module.css";
 
 const Hero: React.FC = () => {
+    const urlFacebook = process.env.NEXT_PUBLIC_RED_SOCIAL_URL_FACEBOOK || "#";
+    const urlGitHub = process.env.NEXT_PUBLIC_RED_SOCIAL_URL_GITHUB || "#";
+    const urlInstagram = process.env.NEXT_PUBLIC_RED_SOCIAL_URL_INSTAGRAM || "#";
+    const urlX = process.env.NEXT_PUBLIC_RED_SOCIAL_URL_X || "#";
+
     useEffect(() => {
         const createRippleEffect = async () => {
             const loadScripts = async () => {
@@ -70,28 +75,30 @@ const Hero: React.FC = () => {
                 <div className={styles.profileImage}>
                     <img
                         alt="Foto de Marvin Campos"
-                        src="/images/perfil.avif"
+                        src="/images/me.jpg"
                         width={150}
                         height={150}
                         className={styles.circleImage}
                     />
                 </div>
                 <h1 className={styles.h1}>
-                    Hola, soy <span className={styles.span}>Tal Persona</span>
+                    Hola, soy <span className={styles.span}>Marvin Campos</span>
                 </h1>
                 <p className={styles.parrafo}>
-                    Soy un apasionado desarrollador Full Stack, combinando habilidades de frontend y backend
-                    para ofrecer soluciones innovadoras y de alto impacto.
+                    Soy un apasionado desarrollador con muchas ganas de aprender y adentrarme mas en el mundo de la programación.
                 </p>
                 <div className={styles.socialLinks}>
-                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                    <a href={urlFacebook} target="_blank" rel="noopener noreferrer">
                         <i className="fab fa-facebook-f"></i>
                     </a>
-                    <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+                    <a href={urlGitHub} target="_blank" rel="noopener noreferrer">
                         <i className="fab fa-github"></i>
                     </a>
-                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                    <a href={urlInstagram} target="_blank" rel="noopener noreferrer">
                         <i className="fab fa-instagram"></i>
+                    </a>
+                    <a href={urlX} target="_blank" rel="noopener noreferrer">
+                        <i className="fab fa-x-twitter"></i>
                     </a>
                 </div>
             </div>

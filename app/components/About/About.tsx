@@ -9,13 +9,13 @@ const About: React.FC = () => {
                 <div className={styles.contenido}>
                     <div className={styles.imagenWrapper}>
                         <img
-                            src="/images/perfil.avif"
+                            src="/images/me2.jpg"
                             alt="Perfil"
                             className={styles.imagen}
                         />
                     </div>
                     <div className={styles.textoWrapper}>
-                        <h3 className={styles.encabezado}>¡Hola! Me llamo Persona X</h3>
+                        <h3 className={styles.encabezado}>¡Hola! Me llamo Marvin Héctor Campos Deza</h3>
                         <p className={styles.subtitulo}>Desarrollador Full Stack</p>
                         <p className={styles.descripcion}>
                             Soy un desarrollador apasionado con experiencia en la creación de aplicaciones web dinámicas y funcionales.
@@ -23,28 +23,16 @@ const About: React.FC = () => {
                         </p>
                         <ul className={styles.detalles}>
                             <li>
-                                <span className={styles.etiqueta}>Cumpleaños</span>
-                                <span className={styles.valor}>: 6 de diciembre de 1990</span>
+                                <span className={styles.etiqueta}>N° Celular</span>
+                                <span className={styles.valor}>: +51 989623418</span>
                             </li>
                             <li>
-                                <span className={styles.etiqueta}>Teléfono</span>
-                                <span className={styles.valor}>: +1 876-369-9009</span>
-                            </li>
-                            <li>
-                                <span className={styles.etiqueta}>Email</span>
-                                <span className={styles.valor}>: personx@example.com</span>
-                            </li>
-                            <li>
-                                <span className={styles.etiqueta}>Ubicación</span>
-                                <span className={styles.valor}>: Calle Principal 123, Ciudad Ejemplo</span>
+                                <span className={styles.etiqueta}>Correo</span>
+                                <span className={styles.valor}>: marvinhectorcamposdeza@gmail.com</span>
                             </li>
                             <li>
                                 <span className={styles.etiqueta}>Idiomas</span>
                                 <span className={styles.valor}>: Inglés, Español</span>
-                            </li>
-                            <li>
-                                <span className={styles.etiqueta}>Freelance</span>
-                                <span className={styles.valor}>: Disponible</span>
                             </li>
                         </ul>
                         <button className={styles.botonDescargar}>

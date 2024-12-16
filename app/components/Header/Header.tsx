@@ -1,25 +1,9 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 import styles from "./Header.module.css";
 
 const Header: React.FC = () => {
-    const [isScrolled, setIsScrolled] = useState(false);
-
-    useEffect(() => {
-        const handleScroll = () => {
-            setIsScrolled(window.scrollY > 0);
-        };
-
-        handleScroll();
-
-        window.addEventListener("scroll", handleScroll);
-
-        return () => {
-            window.removeEventListener("scroll", handleScroll);
-        };
-    }, []);
-
     const irASeccion = (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
         event.preventDefault();
         const href = event.currentTarget.getAttribute("href");
@@ -32,8 +16,17 @@ const Header: React.FC = () => {
     };
 
     return (
-        <header className={`${styles.header} ${isScrolled ? styles.scrolled : ""}`}>
+        <header className={styles.header}>
             <nav className={styles.nav}>
+                <div className={styles.logoContainer}>
+                    <a href="#inicio" onClick={irASeccion}>
+                        <img
+                            src="/images/logo.png"
+                            alt="Logo"
+                            className={styles.logo}
+                        />
+                    </a>
+                </div>
                 <ul className={styles.ul}>
                     <li>
                         <a className={styles.links} href="#inicio" onClick={irASeccion}>
