@@ -94,7 +94,23 @@
 
 .socialLinks a:hover {
     transform: scale(1.2);
-    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.socialLinks .facebook:hover {
+    background-color: #1877f2;
+    background: radial-gradient(circle at 30% 30%, #9dc8ff, #63a7ff, #4898ff, #1877f2);
+}
+
+.socialLinks .github:hover {
+    background: radial-gradient(circle at 30% 30%, #cacaca, #555555, #2c2c2c, #030303);
+}
+
+.socialLinks .instagram:hover {
+    background: radial-gradient(circle at 30% 30%, #fdf497, #fd5949, #d6249f, #285aeb);
+}
+
+.socialLinks .x:hover {
+    background: radial-gradient(circle at 30% 30%, #cacaca, #555555, #2c2c2c, #030303);
 }
 
 @media (max-width: 780px) {

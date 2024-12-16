@@ -41,7 +41,11 @@
 
 .ul li a {
   text-decoration: none;
-  color: white !important;
+  color: white;
+}
+
+.ul li a:hover {
+  color: rgb(0, 190, 133);
 }
 
 .links {

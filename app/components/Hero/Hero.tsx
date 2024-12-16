@@ -25,7 +25,8 @@ const Hero: React.FC = () => {
                     ripplesScript.src =
                         "https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.5.3/jquery.ripples.min.js";
                     ripplesScript.onload = () => resolve();
-                    ripplesScript.onerror = () => reject(new Error("Failed to load jquery.ripples"));
+                    ripplesScript.onerror = () =>
+                        reject(new Error("Failed to load jquery.ripples"));
                     document.body.appendChild(ripplesScript);
                 });
 
@@ -85,19 +86,39 @@ const Hero: React.FC = () => {
                     Hola, soy <span className={styles.span}>Marvin Campos</span>
                 </h1>
                 <p className={styles.parrafo}>
-                    Soy un apasionado desarrollador con muchas ganas de aprender y adentrarme mas en el mundo de la programación.
+                    Soy un apasionado desarrollador con muchas ganas de aprender y adentrarme más en el mundo de la programación.
                 </p>
                 <div className={styles.socialLinks}>
-                    <a href={urlFacebook} target="_blank" rel="noopener noreferrer">
+                    <a
+                        href={urlFacebook}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={styles.facebook}
+                    >
                         <i className="fab fa-facebook-f"></i>
                     </a>
-                    <a href={urlGitHub} target="_blank" rel="noopener noreferrer">
+                    <a
+                        href={urlGitHub}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={styles.github}
+                    >
                         <i className="fab fa-github"></i>
                     </a>
-                    <a href={urlInstagram} target="_blank" rel="noopener noreferrer">
+                    <a
+                        href={urlInstagram}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={styles.instagram}
+                    >
                         <i className="fab fa-instagram"></i>
                     </a>
-                    <a href={urlX} target="_blank" rel="noopener noreferrer">
+                    <a 
+                    href={urlX} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className={styles.x}
+                    >
                         <i className="fab fa-x-twitter"></i>
                     </a>
                 </div>
