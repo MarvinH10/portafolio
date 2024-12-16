@@ -1,0 +1,154 @@
+.about {
+    background-color: white;
+    color: rgb(87, 87, 87);
+    padding: 5px 20px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+
+.titulo {
+    font-size: 2rem;
+    text-align: center;
+    color: rgb(0, 190, 133);
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.titulo::before {
+    content: "";
+    display: block;
+    width: 150px;
+    height: 1px;
+    background: rgb(160, 160, 160);
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
+}
+
+.titulo::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 2px;
+    background: rgb(0, 190, 133);
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+
+.contenido {
+    display: flex;
+    gap: 20px;
+    align-items: stretch;
+}
+
+.imagenWrapper {
+    flex: 1.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imagen {
+    width: 100%;
+    height: 100%;
+    max-width: 600px;
+    object-fit: cover;
+}
+
+.textoWrapper {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.encabezado {
+    font-size: 1.8rem;
+    color: rgb(87, 87, 87);
+    margin-bottom: 10px;
+}
+
+.subtitulo {
+    font-size: 1.2rem;
+    color: rgb(0, 190, 133);
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.descripcion {
+    line-height: 1.6;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.detalles {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+    font-size: 1rem;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    row-gap: 10px;
+    column-gap: 10px;
+    align-items: center;
+}
+
+.detalles li {
+    display: contents;
+}
+
+.etiqueta {
+    font-weight: bold;
+    text-align: left;
+    margin-right: 5px;
+    color: rgb(87, 87, 87);
+}
+
+.valor {
+    color: rgb(87, 87, 87);
+    margin-bottom: 5px;
+}
+
+.botonDescargar {
+    background-color: rgb(0, 190, 133);
+    color: white;
+    border: 2px solid rgb(0, 190, 133);
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 5px;
+    cursor: pointer;
+    align-self: flex-start;
+}
+
+.botonDescargar:hover {
+    background-color: white;
+    color: rgb(0, 190, 133);
+    border: 2px solid;
+}
+
+@media (max-width: 768px) {
+    .contenido {
+        flex-direction: column;
+    }
+
+    .textoWrapper {
+        justify-content: flex-start;
+    }
+}
