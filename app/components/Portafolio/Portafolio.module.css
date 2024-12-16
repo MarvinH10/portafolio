@@ -1,6 +1,6 @@
-.about {
-    background-color: white;
-    color: rgb(87, 87, 87);
+.portafolio {
+    background-color: rgb(87, 87, 87);
+    color: white;
     padding: 5px 20px;
 }
 
@@ -12,14 +12,15 @@
     gap: 20px;
     max-width: 1000px;
     margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
-
 
 .titulo {
     font-size: 2rem;
     text-align: center;
     color: rgb(0, 190, 133);
-    margin-bottom: 40px;
+    margin-bottom: 1px;
     position: relative;
 }
 
@@ -56,20 +57,6 @@
     align-items: stretch;
 }
 
-.imagenWrapper {
-    flex: 1.5;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.imagen {
-    width: 100%;
-    height: 100%;
-    max-width: 600px;
-    object-fit: cover;
-}
-
 .textoWrapper {
     flex: 2;
     display: flex;
@@ -80,15 +67,8 @@
 
 .encabezado {
     font-size: 1.8rem;
-    color: rgb(87, 87, 87);
+    color: white;
     margin-bottom: 10px;
-}
-
-.subtitulo {
-    font-size: 1.2rem;
-    color: rgb(0, 190, 133);
-    font-weight: bold;
-    margin-bottom: 20px;
 }
 
 .descripcion {
@@ -123,24 +103,6 @@
 .valor {
     color: rgb(87, 87, 87);
     margin-bottom: 5px;
-}
-
-.botonDescargar {
-    background-color: rgb(0, 190, 133);
-    color: white;
-    border: 2px solid rgb(0, 190, 133);
-    padding: 10px 20px;
-    font-size: 1rem;
-    font-weight: 700;
-    border-radius: 5px;
-    cursor: pointer;
-    align-self: flex-start;
-}
-
-.botonDescargar:hover {
-    background-color: white;
-    color: rgb(0, 190, 133);
-    border: 2px solid;
 }
 
 @media (max-width: 768px) {
