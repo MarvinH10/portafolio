@@ -8,7 +8,7 @@ Este es un portafolio moderno y minimalista desarrollado **exclusivamente con Re
 - Diseño moderno y completamente responsivo.  
 - Secciones personalizables para Proyectos, Habilidades, Experiencia y Contacto.  
 - Navegación fluida y animaciones interactivas.  
-- Sin dependencias innecesarias: solo React puro.  
+- Sin dependencias innecesarias: solo React puro xd.  
 
 ---
 
