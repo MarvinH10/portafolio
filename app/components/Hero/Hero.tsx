@@ -66,7 +66,7 @@ const Hero: React.FC = () => {
     }, []);
 
     return (
-        <div className={styles.hero}>
+        <div className={styles.hero} id="inicio">
             <img
                 src="/images/bg.webp"
                 alt="Fondo del Hero"

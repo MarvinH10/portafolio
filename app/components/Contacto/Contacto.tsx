@@ -31,7 +31,7 @@ const Contacto: React.FC = () => {
     };
 
     return (
-        <section className={styles.contacto}>
+        <section className={styles.contacto} id="contacto">
             <div className={styles.container}>
                 <h2 className={styles.titulo}>CONTACTO</h2>
                 <div className={styles.contenido}>
