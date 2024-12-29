@@ -10,12 +10,15 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.7.1",
+    "@meronex/icons": "^4.0.0",
+    "devicon": "^2.16.0",
     "jquery": "^3.7.1",
     "next": "15.0.3",
     "rainyday": "^0.0.1",
     "rainyday.js": "^0.1.7",
     "react": "19.0.0-rc-66855b96-20241106",
-    "react-dom": "19.0.0-rc-66855b96-20241106"
+    "react-dom": "19.0.0-rc-66855b96-20241106",
+    "simple-icons": "^14.0.1"
   },
   "devDependencies": {
     "@types/jquery": "^3.5.32",
