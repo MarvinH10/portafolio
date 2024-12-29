@@ -6,68 +6,245 @@
     top: 0;
     left: 0;
     z-index: 1;
-}
-
-.background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -2;
-}
-
-.hero::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.614);
-    z-index: 2;
+    background: radial-gradient(circle at top right,
+            #292929,
+            #252525,
+            #222222,
+            #1d1d1d,
+            #111111 40%,
+            #0f0f0f 50%,
+            #0c0c0c 60%,
+            #000000 90%);
 }
 
 .content {
     position: relative;
     z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
     color: white;
-    text-align: center;
     top: 50%;
     transform: translateY(-50%);
-    z-index: 100;
-    padding-left: 200px;
-    padding-right: 200px;
+    padding: 0 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.textContent {
+    flex: 1;
+    text-align: center;
 }
 
 .h1 {
     font-size: 3rem;
+    margin-bottom: 10px;
 }
 
-.parrafo {
-    color: #a9adb8;
-    font-size: 1rem;
-    line-height: 1.5;
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 34ch;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-right-color: transparent;
+    }
+
+    100% {
+        border-right-color: #ffffff;
+    }
+}
+
+.animatedText {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: transparent;
+    background: linear-gradient(to right, #ffffff, #bfbfbf);
+    background-clip: text;
+    -webkit-background-clip: text;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid #ffffff;
+    text-align: center;
+    display: inline-block;
+    animation: typing 2s steps(30, end) forwards, blink 0.6s step-end infinite;
+    margin: 0 auto;
+}
+
+@keyframes flicker {
+    0% {
+        opacity: 0;
+        text-shadow: none;
+    }
+
+    20% {
+        opacity: 1;
+        text-shadow: 0 0 5px #404040, 0 0 10px #404040, 0 0 20px #404040;
+    }
+
+    40% {
+        opacity: 0;
+        text-shadow: none;
+    }
+
+    60% {
+        opacity: 1;
+        text-shadow: 0 0 10px #707070, 0 0 20px #707070, 0 0 40px #707070;
+    }
+
+    80% {
+        opacity: 0;
+        text-shadow: none;
+    }
+
+    100% {
+        opacity: 1;
+        text-shadow: 0 0 15px #ffffff, 0 0 30px #ffffff, 0 0 60px #ffffff;
+    }
 }
 
 .span {
-    color: rgb(0, 190, 133);
+    color: white;
+    text-shadow: none;
+    animation: flicker 3s ease-in-out;
+    animation-fill-mode: forwards;
 }
 
-.profileImage {
+.profileImageContainer {
+    position: relative;
+    width: 380px;
+    height: 380px;
+    margin: 0 auto;
+}
+
+@keyframes moveToPosition {
+    0% {
+        transform: translate(1200%, -50%) scale(7);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translate(var(--final-x), var(--final-y)) scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.iconContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 20px;
+    z-index: 3;
+}
+
+.icon {
+    position: absolute;
+    font-size: 2rem;
+    color: #ffffff;
+    animation: moveToPosition 1.5s ease-out forwards, bounce 4.5s infinite ease-in-out 1.5s;
+}
+
+.icon:nth-child(1) {
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: moveToPosition 1.5s ease-out forwards, bounce 4.5s infinite ease-in-out 1.5s;
+}
+
+.icon:nth-child(2) {
+    top: 15%;
+    right: -20px;
+    transform: translateY(-50%);
+    animation: moveToPosition 1.5s ease-out forwards, bounce 4.6s infinite ease-in-out 1.5s;
+}
+
+.icon:nth-child(3) {
+    bottom: 30%;
+    right: -30px;
+    transform: translateY(50%);
+    animation: moveToPosition 1.5s ease-out forwards, bounce 4.5s infinite ease-in-out 1.5s;
+}
+
+.icon:nth-child(4) {
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: moveToPosition 1.5s ease-out forwards, bounce 4.1s infinite ease-in-out 1.5s;
+}
+
+.icon:nth-child(5) {
+    bottom: 30%;
+    left: -30px;
+    transform: translateY(50%);
+    animation: moveToPosition 1.5s ease-out forwards, bounce 4.3s infinite ease-in-out 1.5s;
+}
+
+.icon:nth-child(6) {
+    top: 15%;
+    left: -20px;
+    transform: translateY(-50%);
+    animation: moveToPosition 1.5s ease-out forwards, bounce 4.4s infinite ease-in-out 1.5s;
+}
+
+.vueIcon, .reactIcon, .angularIcon, .laravelIcon, .jsIcon, .tsIcon {
+    background-color: white;
+    border-radius: 8px;
+    padding: 10px;
+    transform-origin: center;
+    box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.9);
 }
 
 .circleImage {
+    background-color: rgba(255, 255, 255, 0.2);
     border-radius: 50%;
-    border: 4px solid rgba(255, 255, 255, 0.2);
     object-fit: cover;
-    width: 120px;
-    height: 120px;
+    width: 380px;
+    height: 380px;
+}
+
+@keyframes slideUpWithBounce {
+    0% {
+        transform: translateY(400px);
+        opacity: 0;
+    }
+
+    80% {
+        transform: translateY(-10px);
+        opacity: 1;
+    }
+
+    90% {
+        transform: translateY(5px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
 
 .socialLinks {
@@ -90,6 +267,26 @@
     text-decoration: none;
     transition: transform 0.3s ease, background-color 0.3s ease;
     outline: none;
+    animation: slideUpWithBounce 2.5s ease-out;
+    animation-fill-mode: both;
+    animation-delay: var(--delay);
+    opacity: 1;
+}
+
+.socialLinks .facebook {
+    --delay: 0.1s;
+}
+
+.socialLinks .github {
+    --delay: 0.2s;
+}
+
+.socialLinks .instagram {
+    --delay: 0.3s;
+}
+
+.socialLinks .x {
+    --delay: 0.4s;
 }
 
 .socialLinks a:hover {
@@ -113,9 +310,78 @@
     background: radial-gradient(circle at 30% 30%, #cacaca, #555555, #2c2c2c, #030303);
 }
 
-@media (max-width: 780px) {
+
+@media (max-width: 1069px) {
     .content {
-        padding-left: 20px;
-        padding-right: 20px;
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+        margin-top: 65px;
+    }
+
+    .h1 {
+        font-size: 2rem;
+    }
+
+    .animatedText {
+        font-size: 1.2rem;
+    }
+
+    .profileImageContainer {
+        width: 300px;
+        height: 300px;
+    }
+
+    .circleImage {
+        width: 300px;
+        height: 300px;
+    }
+
+    .icon {
+        font-size: 1.8rem;
+    }
+
+    .socialLinks {
+        gap: 10px;
+    }
+
+    .socialLinks a {
+        width: 35px;
+        height: 35px;
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .h1 {
+        font-size: 1.8rem;
+    }
+
+    .animatedText {
+        font-size: 1rem;
+    }
+
+    .profileImageContainer {
+        width: 250px;
+        height: 250px;
+    }
+
+    .circleImage {
+        width: 250px;
+        height: 250px;
+    }
+
+    .icon {
+        font-size: 1.5rem;
+    }
+
+    .socialLinks {
+        gap: 8px;
+    }
+
+    .socialLinks a {
+        width: 30px;
+        height: 30px;
+        font-size: 1rem;
     }
 }
