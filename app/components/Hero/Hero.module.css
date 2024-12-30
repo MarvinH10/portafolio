@@ -10,10 +10,10 @@
             #292929,
             #252525,
             #222222,
-            #1d1d1d,
-            #111111 40%,
-            #0f0f0f 50%,
-            #0c0c0c 60%,
+            #000000,
+            #000000 50%,
+            #000000 55%,
+            #000000 60%,
             #000000 90%);
 }
 
@@ -161,7 +161,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 5;
+    z-index: 50;
     pointer-events: none;
 }
 
@@ -272,7 +272,7 @@
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgb(85, 85, 85);
     color: white;
     font-size: 1.5rem;
     text-decoration: none;
