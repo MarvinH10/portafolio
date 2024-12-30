@@ -30,8 +30,8 @@ const Hero: React.FC = () => {
                     <img
                         alt="Foto de Marvin Campos"
                         src="/images/avatar.png"
-                        width={150}
-                        height={150}
+                        width={380}
+                        height={380}
                         className={styles.circleImage}
                     />
                 </div>
@@ -48,6 +48,7 @@ const Hero: React.FC = () => {
                             target="_blank"
                             rel="noopener noreferrer"
                             className={styles.facebook}
+                            data-tooltip="Facebook"
                         >
                             <i className="fab fa-facebook-f"></i>
                         </a>
@@ -56,6 +57,7 @@ const Hero: React.FC = () => {
                             target="_blank"
                             rel="noopener noreferrer"
                             className={styles.github}
+                            data-tooltip="GitHub"
                         >
                             <i className="fab fa-github"></i>
                         </a>
@@ -64,6 +66,7 @@ const Hero: React.FC = () => {
                             target="_blank"
                             rel="noopener noreferrer"
                             className={styles.instagram}
+                            data-tooltip="Instagram"
                         >
                             <i className="fab fa-instagram"></i>
                         </a>
@@ -72,6 +75,7 @@ const Hero: React.FC = () => {
                             target="_blank"
                             rel="noopener noreferrer"
                             className={styles.x}
+                            data-tooltip="Twitter"
                         >
                             <i className="fab fa-x-twitter"></i>
                         </a>
