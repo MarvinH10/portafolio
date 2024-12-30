@@ -130,9 +130,11 @@
         transform: translate(1200%, -50%) scale(7);
         opacity: 0;
     }
+
     50% {
         opacity: 1;
     }
+
     100% {
         transform: translate(var(--final-x), var(--final-y)) scale(1);
         opacity: 1;
@@ -145,7 +147,7 @@
     }
 
     50% {
-        transform: translateY(-10px);
+        transform: translateY(-20px);
     }
 }
 
@@ -159,7 +161,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 3;
+    z-index: 5;
+    pointer-events: none;
 }
 
 .icon {
@@ -214,7 +217,7 @@
 .vueIcon, .reactIcon, .angularIcon, .laravelIcon, .jsIcon, .tsIcon {
     background-color: white;
     border-radius: 8px;
-    padding: 10px;
+    padding: 7px;
     transform-origin: center;
     box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.9);
 }
@@ -225,6 +228,14 @@
     object-fit: cover;
     width: 380px;
     height: 380px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    z-index: 4;
+    position: relative;
+}
+
+.circleImage:hover {
+    transform: scale(1.1);
 }
 
 @keyframes slideUpWithBounce {
@@ -239,7 +250,7 @@
     }
 
     90% {
-        transform: translateY(5px);
+        transform: translateY(15px);
     }
 
     100% {
@@ -271,6 +282,47 @@
     animation-fill-mode: both;
     animation-delay: var(--delay);
     opacity: 1;
+    box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.2);
+}
+
+.socialLinks a::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: -120%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    white-space: nowrap;
+    font-size: 0.9rem;
+    opacity: 0;
+    visibility: hidden;
+    text-shadow: 0 0 15px #000000, 0 0 30px #000000, 0 0 60px #000000;
+    transition: opacity 0.2s, transform 0.2s;
+}
+
+.socialLinks a::before {
+    content: '';
+    position: absolute;
+    top: 130%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: white transparent transparent transparent;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s;
+    z-index: 9;
+}
+
+.socialLinks a:hover::after,
+.socialLinks a:hover::before {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(-5px);
 }
 
 .socialLinks .facebook {
@@ -293,23 +345,42 @@
     transform: scale(1.2);
 }
 
+.socialLinks .facebook:hover::after {
+    background: radial-gradient(circle at 30% 30%, #9dc8ff, #63a7ff, #4898ff, #1877f2);
+}
+
+.socialLinks .github:hover::after {
+    background: radial-gradient(circle at 30% 30%, #cacaca, #555555, #2c2c2c, #030303);
+}
+
+.socialLinks .instagram:hover::after {
+    background: radial-gradient(circle at 30% 30%, #fdf497, #fd5949, #d6249f, #285aeb);
+}
+
+.socialLinks .x:hover::after {
+    background: radial-gradient(circle at 30% 30%, #cacaca, #555555, #2c2c2c, #030303);
+}
+
 .socialLinks .facebook:hover {
     background-color: #1877f2;
     background: radial-gradient(circle at 30% 30%, #9dc8ff, #63a7ff, #4898ff, #1877f2);
+    box-shadow: 0 0 5px 2px #1877f2;
 }
 
 .socialLinks .github:hover {
     background: radial-gradient(circle at 30% 30%, #cacaca, #555555, #2c2c2c, #030303);
+    box-shadow: 0 0 5px 2px #555555;
 }
 
 .socialLinks .instagram:hover {
     background: radial-gradient(circle at 30% 30%, #fdf497, #fd5949, #d6249f, #285aeb);
+    box-shadow: 0 0 5px 2px #d6249f;
 }
 
 .socialLinks .x:hover {
     background: radial-gradient(circle at 30% 30%, #cacaca, #555555, #2c2c2c, #030303);
+    box-shadow: 0 0 5px 2px #555555;
 }
-
 
 @media (max-width: 1069px) {
     .content {
@@ -346,9 +417,43 @@
     }
 
     .socialLinks a {
+        margin-top: -10px;
         width: 35px;
         height: 35px;
         font-size: 1.2rem;
+    }
+
+    .socialLinks a::after {
+        content: attr(data-tooltip);
+        position: absolute;
+        bottom: -150%;
+        left: 50%;
+        transform: translateX(-50%);
+        color: white;
+        padding: 5px 10px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        white-space: nowrap;
+        font-size: 0.9rem;
+        opacity: 0;
+        visibility: hidden;
+        text-shadow: 0 0 15px #000000, 0 0 30px #000000, 0 0 60px #000000;
+        transition: opacity 0.2s, transform 0.2s;
+    }
+    
+    .socialLinks a::before {
+        content: '';
+        position: absolute;
+        top: 140%;
+        left: 50%;
+        transform: translateX(-50%);
+        border-width: 6px;
+        border-style: solid;
+        border-color: white transparent transparent transparent;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.2s;
+        z-index: 9;
     }
 }
 
@@ -380,8 +485,42 @@
     }
 
     .socialLinks a {
+        margin-top: -10px;
         width: 30px;
         height: 30px;
         font-size: 1rem;
+    }
+
+    .socialLinks a::after {
+        content: attr(data-tooltip);
+        position: absolute;
+        bottom: -150%;
+        left: 50%;
+        transform: translateX(-50%);
+        color: white;
+        padding: 5px 10px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        white-space: nowrap;
+        font-size: 0.9rem;
+        opacity: 0;
+        visibility: hidden;
+        text-shadow: 0 0 15px #000000, 0 0 30px #000000, 0 0 60px #000000;
+        transition: opacity 0.2s, transform 0.2s;
+    }
+    
+    .socialLinks a::before {
+        content: '';
+        position: absolute;
+        top: 140%;
+        left: 50%;
+        transform: translateX(-50%);
+        border-width: 6px;
+        border-style: solid;
+        border-color: white transparent transparent transparent;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.2s;
+        z-index: 9;
     }
 }
