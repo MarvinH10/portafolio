@@ -19,3 +19,11 @@ body {
   margin: 0;
   padding: 0;
 }
+
+.wave {
+  margin-top: -1px;
+  display: flex;
+  transform: scaleY(-1);
+  position: relative;
+  background-color: white;
+}

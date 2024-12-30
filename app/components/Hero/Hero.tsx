@@ -10,10 +10,12 @@ import LgJavascript from '@meronex/icons/lg/LgJavascript';
 import LgTypescriptIcon from '@meronex/icons/lg/LgTypescriptIcon';
 
 const Hero: React.FC = () => {
-    const urlFacebook = process.env.NEXT_PUBLIC_RED_SOCIAL_URL_FACEBOOK || "#";
-    const urlGitHub = process.env.NEXT_PUBLIC_RED_SOCIAL_URL_GITHUB || "#";
-    const urlInstagram = process.env.NEXT_PUBLIC_RED_SOCIAL_URL_INSTAGRAM || "#";
-    const urlX = process.env.NEXT_PUBLIC_RED_SOCIAL_URL_X || "#";
+    const socialLinks = [
+        { tooltip: "Facebook", url: process.env.NEXT_PUBLIC_RED_SOCIAL_URL_FACEBOOK || "#", iconClass: "fab fa-facebook-f", className: styles.facebook },
+        { tooltip: "GitHub", url: process.env.NEXT_PUBLIC_RED_SOCIAL_URL_GITHUB || "#", iconClass: "fab fa-github", className: styles.github },
+        { tooltip: "Instagram", url: process.env.NEXT_PUBLIC_RED_SOCIAL_URL_INSTAGRAM || "#", iconClass: "fab fa-instagram", className: styles.instagram },
+        { tooltip: "Twitter", url: process.env.NEXT_PUBLIC_RED_SOCIAL_URL_X || "#", iconClass: "fab fa-x-twitter", className: styles.x },
+    ];
 
     return (
         <div className={styles.hero} id="inicio">
@@ -43,42 +45,18 @@ const Hero: React.FC = () => {
                         <i className="fas fa-terminal"></i> Desarrollador Frontend de Perú
                     </p>
                     <div className={styles.socialLinks}>
-                        <a
-                            href={urlFacebook}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className={styles.facebook}
-                            data-tooltip="Facebook"
-                        >
-                            <i className="fab fa-facebook-f"></i>
-                        </a>
-                        <a
-                            href={urlGitHub}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className={styles.github}
-                            data-tooltip="GitHub"
-                        >
-                            <i className="fab fa-github"></i>
-                        </a>
-                        <a
-                            href={urlInstagram}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className={styles.instagram}
-                            data-tooltip="Instagram"
-                        >
-                            <i className="fab fa-instagram"></i>
-                        </a>
-                        <a
-                            href={urlX}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className={styles.x}
-                            data-tooltip="Twitter"
-                        >
-                            <i className="fab fa-x-twitter"></i>
-                        </a>
+                        {socialLinks.map(({ tooltip, url, iconClass, className }, index) => (
+                            <a
+                                key={index}
+                                href={url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className={className}
+                                data-tooltip={tooltip}
+                            >
+                                <i className={iconClass}></i>
+                            </a>
+                        ))}
                     </div>
                 </div>
             </div>
