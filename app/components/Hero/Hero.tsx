@@ -42,7 +42,7 @@ const Hero: React.FC = () => {
                         Hola, soy <span className={styles.span}>Marvin Campos</span>
                     </h1>
                     <p className={styles.animatedText}>
-                        <i className="fas fa-terminal"></i> Desarrollador Frontend de Perú
+                        <i className="fas fa-terminal"></i> Desarrollador Frontend/Backend.
                     </p>
                     <div className={styles.socialLinks}>
                         {socialLinks.map(({ tooltip, url, iconClass, className }, index) => (

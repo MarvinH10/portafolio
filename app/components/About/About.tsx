@@ -15,28 +15,16 @@ const About: React.FC = () => {
                         />
                     </div>
                     <div className={styles.textoWrapper}>
-                        <h3 className={styles.encabezado}>¡Hola! Me llamo Marvin Héctor Campos Deza</h3>
-                        <p className={styles.subtitulo}>Desarrollador Full Stack</p>
                         <p className={styles.descripcion}>
                             Soy un desarrollador apasionado con experiencia en la creación de aplicaciones web dinámicas y funcionales.
                             Mi objetivo es combinar habilidades de frontend y backend para ofrecer soluciones innovadoras e impactantes.
                         </p>
-                        <ul className={styles.detalles}>
-                            <li>
-                                <span className={styles.etiqueta}>N° Celular</span>
-                                <span className={styles.valor}>: +51 989623418</span>
-                            </li>
-                            <li>
-                                <span className={styles.etiqueta}>Correo</span>
-                                <span className={styles.valor}>: marvinhectorcamposdeza@gmail.com</span>
-                            </li>
-                            <li>
-                                <span className={styles.etiqueta}>Idiomas</span>
-                                <span className={styles.valor}>: Inglés, Español</span>
-                            </li>
-                        </ul>
-                        <button className={styles.botonDescargar}>
-                            Descargar CV
+                        <h2 className={styles.apasiona}>¿Qué es lo que más me apasiona?</h2>
+                        <p className={styles.descripcion}>
+                            Lo que más me apasiona es la resolución de problemas y el aprendizaje continuo. Siempre estoy buscando nuevas tecnologías que me permitan mejorar la experiencia de usuario y optimizar el rendimiento de las aplicaciones. Me encanta colaborar con otros desarrolladores y aprender de sus enfoques y soluciones creativas.
+                        </p>
+                        <button className={styles.buttonDescargar} role="button">
+                            <i className="fa-solid fa-file-pdf"></i><span className={styles.spanButton}>Descargar CV</span>
                         </button>
                     </div>
                 </div>
